@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento New Level Week</title>
@@ -12,9 +15,40 @@
     </header>
     <main>
         <section>
-            <h2>Assistente de Meta</h2>
-            <p>Pergunte sobre o seu personagem favorito de Belach</p>
+            <div>             
+                <h2>Assistente de Meta</h2>
+                <p>Pergunte sobre o seu personagem favorito de Belach</p>
+                <form id="form">
+                    <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini">
+                    <select id="gameSelect">
+                        <option value="">Selecione um Personagem</option>
+                        <option value="Genryusai Shigekuni Yamamoto">Genryusai Shigekuni Yamamoto</option>
+                        <option value="Soifon">Soifon</option>
+                        <option value="Rojuro Otoribashi">Rojuro Otoribashi</option>
+                        <option value="Kenpachi Unohana">Kenpachi Unohana</option>
+                        <option value="Shinji Hirako">Shinji Hirako</option>
+                        <option value="Kuchiki Byakuya">Kuchiki Byakuya</option>
+                        <option value="Sajin Komamura">Sajin Komamura</option>
+                        <option value="Kyoraku Shunsui">Kyoraku Shunsui</option>
+                        <option value="Muguruma Kensei">Muguruma Kensei</option>
+                        <option value="Toshiro Hitsugaya">Toshiro Hitsugaya</option>
+                        <option value="Zaraki Kenpachi">Zaraki Kenpachi</option>
+                        <option value="Kurotsuchi Mayuri">Kurotsuchi Mayuri</option>
+                        <option value="Juushiro Ukitake">Juushiro Ukitake</option>
+                    </select>
+                    <input id="questionInput" type="text" placeholder="Ex: Melhor Capitão de Bleach" required>
+                    <button id="askButton">
+                        <h2>Perguntar</h2>
+                    </button>
+                </form>
+                <div id="aiResponse">
+                    <div id="response-content">
+
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <script src="./script.js"></script>
 </body>
 </html>
